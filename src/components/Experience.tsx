@@ -3,7 +3,7 @@ import { Briefcase, GraduationCap } from 'lucide-react'
 import { experience } from '../data/portfolio'
 import { SectionHeader } from './SectionHeader'
 
-export function ExperienceTimeline() {
+export function Experience() {
   return (
     <section id="experience" className="px-4 py-24">
       <div className="mx-auto max-w-5xl">
