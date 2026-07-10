@@ -52,6 +52,14 @@ export function SelectedWork() {
           ))}
         </div>
       </div>
+
+      <div className="grid gap-5 lg:grid-cols-2">
+          {projects.map((project, index) => (
+            <ProjectCard key={project.title} project={project} index={index} />
+          ))}
+        </div>
+
+      
     </section>
   )
 }
