@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { CheckCircle2 } from 'lucide-react'
-import { caseStudies } from '../data/portfolio'
+import { caseStudies, projects } from '../data/portfolio'
 import { SectionHeader } from './SectionHeader'
 import { ProjectCard } from './ProjectCard'
 
