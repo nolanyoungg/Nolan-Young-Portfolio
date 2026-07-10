@@ -6,7 +6,7 @@ import { SectionHeader } from './SectionHeader'
 export function Experience() {
   return (
     <section id="experience" className="px-4 py-24">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-7xl">
         <SectionHeader
           eyebrow="Experience"
           title="Technical leadership with operational context"
