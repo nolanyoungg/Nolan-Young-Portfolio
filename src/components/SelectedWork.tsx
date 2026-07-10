@@ -51,17 +51,22 @@ export function SelectedWork() {
                 </div>
               </div>
             </motion.article>
-          ))}
-        </div>
-      </div>
 
-      <div className="grid gap-5 lg:grid-cols-2">
+<div className="mt-12 grid gap-5 lg:grid-cols-2">
           {projects.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} />
+            <ProjectCard
+              key={project.title}
+              project={project}
+              index={index}
+            />
           ))}
         </div>
 
       
-    </section>
+          ))}
+        </div>
+      </div>
+
+      
   )
 }
