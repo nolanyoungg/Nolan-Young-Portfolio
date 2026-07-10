@@ -7,7 +7,7 @@ export function Hero() {
   const resumeHref = `${import.meta.env.BASE_URL}resume.pdf`
 
   return (
-    <section id="home" className="px-4 pb-24 pt-32 md:pt-40">
+    <section id="home" className="px-4 pb-24 pt-32 md:pt-28">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65 }}>
