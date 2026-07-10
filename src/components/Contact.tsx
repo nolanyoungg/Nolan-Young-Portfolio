@@ -1,7 +1,7 @@
 import { Download, ExternalLink, Mail, MapPin } from 'lucide-react'
 
 export function Contact() {
-  const resumeHref = `${import.meta.env.BASE_URL}resume.pdf`
+  const resumeHref = `${import.meta.env.BASE_URL}Nolan-Young-Resume.pdf`
 
   return (
     <section id="contact" className="px-4 py-24">
@@ -26,9 +26,17 @@ export function Contact() {
             <ExternalLink className="text-sky-300" size={20} /> LinkedIn placeholder
           </a>
         </div>
-        <a className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-sky-300 px-6 py-3 font-semibold text-slate-950 transition hover:bg-sky-200" href={resumeHref}>
-          <Download size={18} /> Download Resume
-        </a>
+        <a
+          className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-sky-300 px-6 py-3 font-semibold text-slate-950 transition hover:bg-sky-200"
+          href={resumeHref}
+          type="application/pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Nolan Young's résumé PDF in a new tab"
+        >
+          <Download size={18} />
+          View Resume
+      </a>
       </div>
     </section>
   )
