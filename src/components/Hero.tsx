@@ -4,7 +4,7 @@ import { metrics, operatingPillars } from '../data/portfolio'
 import { AnimatedCounter } from './AnimatedCounter'
 
 export function Hero() {
-  const resumeHref = `${import.meta.env.BASE_URL}resume.pdf`
+  const resumeHref = `${import.meta.env.BASE_URL}Nolan-Young-Resume.pdf`
 
   return (
     <section id="home" className="px-4 pb-24 pt-32 md:pt-28">
