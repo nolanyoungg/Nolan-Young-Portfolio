@@ -46,14 +46,14 @@ export function Contact() {
           </a>
 
           <a
-            className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-slate-100 transition hover:border-sky-300/35"
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ExternalLink className="text-sky-300" size={20} />
-            LinkedIn placeholder
-          </a>
+          className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-slate-100 transition hover:border-sky-300/35"
+          href="https://www.linkedin.com/in/nolan-young-b4326329b"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ExternalLink className="text-sky-300" size={20} />
+          LinkedIn — Nolan Young
+        </a>
         </div>
 
         <a
