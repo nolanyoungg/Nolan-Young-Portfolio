@@ -2,12 +2,13 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Braces, Download, Layers3, MapPin, Network, ShieldCheck } from 'lucide-react'
 import { metrics, operatingPillars } from '../data/portfolio'
 import { AnimatedCounter } from './AnimatedCounter'
+import { LetterGlitch } from './LetterGlitch'
 
 export function Hero() {
   const resumeHref = `${import.meta.env.BASE_URL}Nolan-Young-Resume.pdf`
 
   return (
-    <section id="home-v1" className="px-4 pb-24 pt-32 md:pt-28">
+    <section id="home" className="px-4 pb-24 pt-32 md:pt-28">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65 }}>
@@ -58,6 +59,15 @@ export function Hero() {
                   <p className="mt-1 text-sm text-slate-300">{metric.label}</p>
                 </div>
               ))}
+            </div>
+            <div className="mt-6 h-32 overflow-hidden rounded-2xl border border-white/10 bg-black shadow-inner shadow-cyan-950/30">
+              <LetterGlitch
+                glitchColors={['#06B6D4', '#7cff67', '#F43F5E']}
+                glitchSpeed={110}
+                centerVignette={false}
+                outerVignette={false}
+                smooth
+              />
             </div>
           </motion.aside>
         </div>
