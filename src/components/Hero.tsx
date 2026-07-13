@@ -51,7 +51,7 @@ export function Hero() {
               <Braces className="text-sky-300" size={28} />
             </div>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              {metrics.map((metric) => (
+              {metrics.filter((metric) => metric.label !== 'added revenue impact').map((metric) => (
                 <div key={metric.label} className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
                   <p className="text-3xl font-semibold text-white">
                     <AnimatedCounter value={metric.value} prefix={metric.prefix} suffix={metric.suffix} />
