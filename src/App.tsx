@@ -4,6 +4,7 @@ import { Capabilities } from './components/Capabilities'
 import { Contact } from './components/Contact'
 import { Experience } from './components/Experience'
 import { Hero } from './components/Hero'
+import { HeroV2 } from './components/HeroV2'
 import { Impact } from './components/Impact'
 import { Navbar } from './components/Navbar'
 import { Principles } from './components/Principles'
@@ -17,6 +18,7 @@ function App() {
       <Background />
       <Navbar />
       <main className="relative z-10">
+        <HeroV2 />
         <Hero />
         <Impact />
         <SelectedWork />
