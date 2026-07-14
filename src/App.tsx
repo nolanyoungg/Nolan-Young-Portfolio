@@ -9,6 +9,7 @@ import { Navbar } from './components/Navbar'
 import { Principles } from './components/Principles'
 import { ScrollProgress } from './components/ScrollProgress'
 import { SelectedWork } from './components/SelectedWork'
+import { SelectedWorkV2 } from './components/SelectedWorkV2'
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <main className="relative z-10">
         <Hero />
         <Impact />
-        <SelectedWork />
+        <SelectedWorkV2 />
         <Capabilities />
         <Experience />
         <Principles />
