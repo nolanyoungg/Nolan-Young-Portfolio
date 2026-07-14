@@ -10,9 +10,9 @@ export function Hero() {
   return (
     <section id="home" className="px-4 pb-24 pt-32 md:pt-28">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
-          <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65 }}>
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-sky-300/20 bg-sky-300/8 px-4 py-2 text-sm text-sky-100">
+        <div className="grid min-w-0 gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
+          <motion.div className="min-w-0" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65 }}>
+            <div className="theme-accent-pill mb-6 inline-flex items-center gap-2 rounded-full border border-sky-300/20 bg-sky-300/8 px-4 py-2 text-sm text-sky-100">
               <MapPin size={16} /> Queensbury, NY
             </div>
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-300">Nolan Young</p>
@@ -27,7 +27,7 @@ export function Hero() {
               <a className="inline-flex items-center justify-center gap-2 rounded-full bg-sky-300 px-6 py-3 font-semibold text-slate-950 transition hover:bg-sky-200" href="#work">
                 View selected work <ArrowRight size={18} />
               </a>
-              <a className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white transition hover:bg-white/10" href="#capabilities">
+              <a className="theme-outline-button inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-white transition hover:bg-white/10" href="#capabilities">
                 Explore capabilities
               </a>
               {/* Place Nolan's resume PDF in public/resume.pdf before deployment. */}
@@ -38,7 +38,7 @@ export function Hero() {
           </motion.div>
 
           <motion.aside
-            className="rounded-[2rem] border border-white/10 bg-slate-950/62 p-6 shadow-2xl shadow-slate-950/40 backdrop-blur-xl"
+            className="theme-surface min-w-0 rounded-[2rem] border border-white/10 bg-slate-950/62 p-6 shadow-2xl shadow-slate-950/40 backdrop-blur-xl"
             initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.65, delay: 0.1 }}
@@ -52,7 +52,7 @@ export function Hero() {
             </div>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {metrics.filter((metric) => metric.label !== 'added revenue impact').map((metric) => (
-                <div key={metric.label} className="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+                <div key={metric.label} className="theme-subtle-surface rounded-2xl border border-white/10 bg-white/[0.04] p-4">
                   <p className="text-3xl font-semibold text-white">
                     <AnimatedCounter value={metric.value} prefix={metric.prefix} suffix={metric.suffix} />
                   </p>
@@ -78,7 +78,7 @@ export function Hero() {
             return (
               <motion.article
                 key={pillar.title}
-                className="rounded-3xl border border-white/10 bg-slate-950/50 p-6 backdrop-blur"
+                className="theme-surface rounded-3xl border border-white/10 bg-slate-950/50 p-6 backdrop-blur"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

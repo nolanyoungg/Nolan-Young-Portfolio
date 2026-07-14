@@ -16,7 +16,7 @@ export function Capabilities() {
           {capabilities.map((capability, index) => (
             <motion.article
               key={capability.title}
-              className="rounded-[2rem] border border-white/10 bg-slate-950/58 p-6 backdrop-blur"
+              className="theme-surface rounded-[2rem] border border-white/10 bg-slate-950/58 p-6 backdrop-blur"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
@@ -27,7 +27,7 @@ export function Capabilities() {
               <p className="mt-3 leading-7 text-slate-300">{capability.description}</p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {capability.technologies.map((technology) => (
-                  <span key={technology} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-slate-300">
+                  <span key={technology} className="theme-subtle-surface rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-slate-300">
                     {technology}
                   </span>
                 ))}

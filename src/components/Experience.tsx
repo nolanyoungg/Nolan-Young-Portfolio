@@ -21,7 +21,7 @@ export function Experience() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
             >
-              <div className="ml-12 rounded-3xl border border-blue-300/14 bg-slate-950/62 p-6 backdrop-blur md:ml-0">
+              <div className="theme-surface ml-12 rounded-3xl border border-blue-300/14 bg-slate-950/62 p-6 backdrop-blur md:ml-0">
                 <span className="absolute left-2 top-6 grid h-8 w-8 place-items-center rounded-full bg-blue-500 text-white md:left-1/2 md:-translate-x-1/2">
                   <Briefcase size={16} />
                 </span>
@@ -37,7 +37,7 @@ export function Experience() {
             </motion.article>
           ))}
         </div>
-        <div className="mt-10 rounded-3xl border border-cyan-300/14 bg-cyan-300/8 p-6">
+        <div className="theme-accent-surface mt-10 rounded-3xl border border-cyan-300/14 bg-cyan-300/8 p-6">
           <div className="flex items-start gap-4">
             <GraduationCap className="shrink-0 text-cyan-300" size={26} />
             <div>

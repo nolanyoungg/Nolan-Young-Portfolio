@@ -5,7 +5,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="px-4 py-24">
-      <div className="mx-auto max-w-5xl rounded-[2rem] border border-sky-300/16 bg-gradient-to-br from-slate-950/92 via-blue-950/42 to-slate-950/92 p-8 shadow-[0_0_90px_rgba(14,165,233,0.12)] backdrop-blur md:p-12">
+      <div className="theme-contact-surface mx-auto max-w-5xl rounded-[2rem] border border-sky-300/16 bg-gradient-to-br from-slate-950/92 via-blue-950/42 to-slate-950/92 p-8 shadow-[0_0_90px_rgba(14,165,233,0.12)] backdrop-blur md:p-12">
         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-sky-300">
           Contact
         </p>
@@ -23,20 +23,20 @@ export function Contact() {
 
         <div className="mt-8 grid gap-3 sm:grid-cols-2">
           <a
-            className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-slate-100 transition hover:border-sky-300/35"
+            className="theme-subtle-surface flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-slate-100 transition hover:border-sky-300/35"
             href="mailto:nolanyoung7@yahoo.com"
           >
             <Mail className="text-sky-300" size={20} />
             nolanyoung7@yahoo.com
           </a>
 
-          <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-slate-100">
+          <div className="theme-subtle-surface flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-slate-100">
             <MapPin className="text-sky-300" size={20} />
             Queensbury, NY
           </div>
 
           <a
-            className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-slate-100 transition hover:border-sky-300/35"
+            className="theme-subtle-surface flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-slate-100 transition hover:border-sky-300/35"
             href="https://github.com/nolanyoungg"
             target="_blank"
             rel="noopener noreferrer"
@@ -46,7 +46,7 @@ export function Contact() {
           </a>
 
           <a
-          className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-slate-100 transition hover:border-sky-300/35"
+          className="theme-subtle-surface flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-slate-100 transition hover:border-sky-300/35"
           href="https://www.linkedin.com/in/nolan-young-b4326329b"
           target="_blank"
           rel="noopener noreferrer"

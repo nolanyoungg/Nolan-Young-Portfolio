@@ -21,7 +21,7 @@ export function Impact() {
             return (
               <motion.article
                 key={metric.label}
-                className="rounded-3xl border border-white/10 bg-slate-950/58 p-5 backdrop-blur transition hover:-translate-y-1 hover:border-sky-300/35"
+                className="theme-surface rounded-3xl border border-white/10 bg-slate-950/58 p-5 backdrop-blur transition hover:-translate-y-1 hover:border-sky-300/35"
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}

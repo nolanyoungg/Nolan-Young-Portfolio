@@ -11,7 +11,7 @@ type Project = {
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <motion.article
-      className="group relative min-h-full overflow-hidden rounded-3xl border border-blue-300/14 bg-slate-950/62 p-6 shadow-xl shadow-blue-950/25 backdrop-blur transition hover:-translate-y-1 hover:border-cyan-300/40"
+      className="theme-surface group relative min-h-full overflow-hidden rounded-3xl border border-blue-300/14 bg-slate-950/62 p-6 shadow-xl shadow-blue-950/25 backdrop-blur transition hover:-translate-y-1 hover:border-cyan-300/40"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-70px' }}
@@ -36,7 +36,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       </ul>
       <div className="mt-6 flex flex-wrap gap-2">
         {project.tags.map((tag) => (
-          <span key={tag} className="rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium text-blue-100 ring-1 ring-blue-300/12">
+          <span key={tag} className="theme-tag rounded-full bg-blue-400/10 px-3 py-1 text-xs font-medium text-blue-100 ring-1 ring-blue-300/12">
             {tag}
           </span>
         ))}

@@ -16,7 +16,7 @@ export function Principles() {
           {principles.map((principle, index) => (
             <motion.div
               key={principle}
-              className="flex items-center gap-3 rounded-3xl border border-white/10 bg-slate-950/54 p-5 text-slate-200 backdrop-blur"
+              className="theme-surface flex items-center gap-3 rounded-3xl border border-white/10 bg-slate-950/54 p-5 text-slate-200 backdrop-blur"
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
