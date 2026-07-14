@@ -3,7 +3,7 @@ import { CheckCircle2 } from 'lucide-react'
 import { caseStudies } from '../data/portfolio'
 import { SectionHeader } from './SectionHeader'
 
-export function SelectedWork() {
+export function SelectedWorkV2() {
   return (
     <section id="work" className="px-4 py-24">
       <div className="mx-auto max-w-7xl">
