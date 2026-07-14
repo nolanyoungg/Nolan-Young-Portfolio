@@ -8,7 +8,7 @@ import { Impact } from './components/Impact'
 import { Navbar } from './components/Navbar'
 import { Principles } from './components/Principles'
 import { ScrollProgress } from './components/ScrollProgress'
-import { SelectedWork } from './components/SelectedWork'
+
 import { SelectedWorkV2 } from './components/SelectedWorkV2'
 
 function App() {
