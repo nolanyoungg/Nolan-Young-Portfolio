@@ -46,7 +46,7 @@ export function Hero() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-sm text-sky-300">Professional profile</p>
-                <h2 className="mt-2 text-2xl font-semibold text-white">Software development + technical ownership</h2>
+                <h2 className="mt-2 text-2xl font-semibold text-white">Software Developer</h2>
               </div>
               <Braces className="text-sky-300" size={28} />
             </div>
