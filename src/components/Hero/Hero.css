@@ -181,12 +181,21 @@ html[data-theme="light"] .hero__location {
   border-color: rgba(14, 116, 144, 0.24);
   background: rgba(224, 242, 254, 0.72);
 }
-.hero__button--outline {
+html[data-theme="light"] .hero__button--outline {
   border-color: rgba(14, 116, 144, 0.28);
   background: rgba(255, 255, 255, 0.72);
 }
-.hero__button--outline:hover {
+html[data-theme="light"] .hero__button--outline:hover {
   background: rgba(224, 242, 254, 0.9);
+}
+html[data-theme="light"] .hero__button--resume {
+  color: #075985;
+  border-color: rgba(3, 105, 161, 0.32);
+  background: rgba(240, 249, 255, 0.82);
+}
+html[data-theme="light"] .hero__button--resume:hover {
+  border-color: rgba(3, 105, 161, 0.55);
+  background: rgba(224, 242, 254, 0.92);
 }
 @media (min-width: 640px) {
   .hero__actions {

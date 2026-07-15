@@ -90,6 +90,11 @@
   font-size: 0.75rem;
   font-weight: 500;
 }
+html[data-theme="light"] .selected-work-v2__tag {
+  border-color: rgba(3, 105, 161, 0.28);
+  color: #075985;
+  background: rgba(224, 242, 254, 0.88);
+}
 @media (min-width: 768px) {
   .selected-work-v2__title {
     font-size: 1.875rem;
