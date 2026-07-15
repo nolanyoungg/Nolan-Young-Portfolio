@@ -7,6 +7,10 @@ export default function SplashScreen() {
     animationData,
     loop: true,
     autoplay: true,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid meet',
+      progressiveLoad: true,
+    },
   })
 
   return (

@@ -9,7 +9,12 @@
 }
 
 .splash-animation-container {
-  height: 50vh;
+  width: min(50vh, 70vw);
+  height: min(50vh, 70vw);
+  overflow: hidden;
+  contain: layout paint;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .splash-animation-container > div,
