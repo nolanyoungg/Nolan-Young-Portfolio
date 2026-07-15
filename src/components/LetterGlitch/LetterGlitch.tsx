@@ -1,4 +1,3 @@
-import { useReducedMotion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import "./LetterGlitch.css";
 
@@ -40,7 +39,6 @@ export function LetterGlitch({
   const grid = useRef({ columns: 0, rows: 0 });
   const context = useRef<CanvasRenderingContext2D | null>(null);
   const lastGlitchTime = useRef(0);
-  const reduceMotion = useReducedMotion();
 
   const lettersAndSymbols = Array.from(characters);
   const fontSize = 16;
@@ -182,8 +180,6 @@ export function LetterGlitch({
     lastGlitchTime.current = Date.now();
     resizeCanvas();
 
-    if (reduceMotion) return undefined;
-
     const animate = () => {
       const now = Date.now();
       if (now - lastGlitchTime.current >= glitchSpeed) {
@@ -219,7 +215,7 @@ export function LetterGlitch({
     };
     // The React Bits implementation intentionally restarts when timing behavior changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [glitchSpeed, reduceMotion, smooth]);
+  }, [glitchSpeed, smooth]);
 
   return (
     <div className={`letter-glitch ${className}`}>

@@ -16,9 +16,7 @@ const SplashScreen = lazy(
 );
 
 function App() {
-  const [showSplash, setShowSplash] = useState(
-    () => !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-  );
+  const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
     const timer = window.setTimeout(() => setShowSplash(false), 1750);

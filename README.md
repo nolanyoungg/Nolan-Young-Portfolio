@@ -85,22 +85,22 @@ src/components/ComponentName/
 
 Behavior-only components can omit the CSS file. The existing splash component retains its established lowercase folder name: `src/components/splashScreen/`.
 
-| Component                   | Responsibility                                                                                                     |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `AnimatedCounter`           | Animates metrics when they enter the viewport and respects reduced-motion preferences.                             |
-| `Background`                | Fixed gradient, grid, and ambient glow behind the page.                                                            |
-| `Capabilities`              | Capability cards sourced from `portfolio.ts`.                                                                      |
-| `Contact`                   | Contact links and résumé call-to-action.                                                                           |
-| `Experience`                | Career timeline and education panel.                                                                               |
-| `Hero`                      | Introductory section, profile metrics, calls to action, and glitch panel.                                          |
-| `Impact`                    | Measured business outcomes and animated metric cards.                                                              |
-| `LetterGlitch`              | Canvas-based animated character effect used by the hero.                                                           |
-| `Navbar`                    | Desktop/mobile navigation, active-section tracking, and light/dark theme switch.                                   |
-| `Principles`                | Engineering-principles grid.                                                                                       |
-| `ScrollProgress`            | Framer Motion scroll-position indicator.                                                                           |
-| `SectionHeader`             | Reusable eyebrow, heading, and supporting copy block.                                                              |
-| `SelectedWorkV2`            | Case-study cards sourced from `portfolio.ts`.                                                                      |
-| `splashScreen/SplashScreen` | Full-screen Lottie overlay shown for 1750 ms when the app first loads, except for users who prefer reduced motion. |
+| Component                   | Responsibility                                                                         |
+| --------------------------- | -------------------------------------------------------------------------------------- |
+| `AnimatedCounter`           | Animates metrics when they enter the viewport and respects reduced-motion preferences. |
+| `Background`                | Fixed gradient, grid, and ambient glow behind the page.                                |
+| `Capabilities`              | Capability cards sourced from `portfolio.ts`.                                          |
+| `Contact`                   | Contact links and résumé call-to-action.                                               |
+| `Experience`                | Career timeline and education panel.                                                   |
+| `Hero`                      | Introductory section, profile metrics, calls to action, and glitch panel.              |
+| `Impact`                    | Measured business outcomes and animated metric cards.                                  |
+| `LetterGlitch`              | Canvas-based animated character effect used by the hero.                               |
+| `Navbar`                    | Desktop/mobile navigation, active-section tracking, and light/dark theme switch.       |
+| `Principles`                | Engineering-principles grid.                                                           |
+| `ScrollProgress`            | Framer Motion scroll-position indicator.                                               |
+| `SectionHeader`             | Reusable eyebrow, heading, and supporting copy block.                                  |
+| `SelectedWorkV2`            | Case-study cards sourced from `portfolio.ts`.                                          |
+| `splashScreen/SplashScreen` | Full-screen Lottie overlay shown for 1750 ms when the app first loads.                 |
 
 ### Updating content
 
@@ -134,7 +134,7 @@ The résumé is served from `public/Nolan-Young-Resume.pdf`. Access it through `
 
 ## Splash screen behavior
 
-`App.tsx` displays the splash for 1750 ms unless the visitor has enabled reduced motion, in which case it renders the portfolio immediately. During the splash interval, `SplashScreen` is loaded separately from the main application bundle. It uses `useLottie` with `src/assets/lottie/splashAnimation.json`, a stable responsive square animation region capped at 50vh, and the bundled Agustina typeface. When the timer completes, the splash unmounts and the portfolio mounts normally.
+`App.tsx` displays the splash for 1750 ms. During the splash interval, `SplashScreen` is loaded separately from the main application bundle. It uses `useLottie` with `src/assets/lottie/splashAnimation.json`, a stable responsive square animation region capped at 50vh, and the bundled Agustina typeface. When the timer completes, the splash unmounts and the portfolio mounts normally.
 
 ## GitHub Pages workflow
 
