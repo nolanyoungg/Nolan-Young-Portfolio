@@ -1,10 +1,16 @@
 import './SplashScreen.css'
+import { motion } from 'framer-motion'
 import Lottie from 'lottie-react'
 import animationData from '../../assets/lottie/splashAnimation.json'
 
 export default function SplashScreen() {
   return (
-    <div className="splash-container">
+    <motion.div
+      className="splash-container"
+      initial={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.25, ease: 'easeOut' }}
+    >
       <div className="splash-animation-container">
         <Lottie
           animationData={animationData}
@@ -18,6 +24,6 @@ export default function SplashScreen() {
         <span className="splash-title">Nolan Young</span>
         <span className="grey-color">/&gt;</span>
       </div>
-    </div>
+    </motion.div>
   )
 }

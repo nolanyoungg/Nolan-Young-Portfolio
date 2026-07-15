@@ -1,4 +1,5 @@
-import { MotionConfig } from 'framer-motion'
+import { AnimatePresence, MotionConfig } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import { Background } from './components/Background/Background'
 import { Capabilities } from './components/Capabilities/Capabilities'
 import { Contact } from './components/Contact/Contact'
@@ -10,24 +11,36 @@ import { Principles } from './components/Principles/Principles'
 import { ScrollProgress } from './components/ScrollProgress/ScrollProgress'
 
 import { SelectedWorkV2 } from './components/SelectedWorkV2/SelectedWorkV2'
+import SplashScreen from './components/splashScreen/SplashScreen'
 
 function App() {
-  return (
-    <MotionConfig reducedMotion="user">
-      <ScrollProgress />
-      <Background />
-      <Navbar />
+  const [showSplash, setShowSplash] = useState(true)
 
-      <main className="app-main">
-        <Hero />
-        <Impact />
-        <SelectedWorkV2 />
-        <Capabilities />
-        <Experience />
-        <Principles />
-        <Contact />
-      </main>
-    </MotionConfig>
+  useEffect(() => {
+    const timer = window.setTimeout(() => setShowSplash(false), 2000)
+    return () => window.clearTimeout(timer)
+  }, [])
+
+  return (
+    <>
+      <MotionConfig reducedMotion="user">
+        <ScrollProgress />
+        <Background />
+        <Navbar />
+
+        <main className="app-main">
+          <Hero />
+          <Impact />
+          <SelectedWorkV2 />
+          <Capabilities />
+          <Experience />
+          <Principles />
+          <Contact />
+        </main>
+      </MotionConfig>
+
+      <AnimatePresence>{showSplash && <SplashScreen />}</AnimatePresence>
+    </>
   )
 }
 
