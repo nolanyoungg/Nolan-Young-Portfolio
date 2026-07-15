@@ -5,11 +5,16 @@ import animationData from '../../assets/lottie/splashAnimation.json'
 export default function SplashScreen() {
   const { View } = useLottie({
     animationData,
-    loop: true,
+    // The animation runs for 80 frames (about 1.33 seconds). Playing it once
+    // prevents its first frame from popping back in before the 1.75 second
+    // splash timeout completes.
+    loop: false,
     autoplay: true,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid meet',
-      progressiveLoad: true,
+      // Build every SVG layer before playback. The cube artwork introduces
+      // layers as it animates, so progressive loading can look like a hitch.
+      progressiveLoad: false,
     },
   })
 
