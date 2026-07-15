@@ -1,0 +1,4 @@
+.selected-work { padding:6rem 1rem; }
+.selected-work__inner { max-width:80rem; margin:0 auto; }
+.selected-work__grid { display:grid; gap:1.25rem; }
+@media (min-width:1024px) { .selected-work__grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }

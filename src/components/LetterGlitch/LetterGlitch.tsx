@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import './LetterGlitch.css'
 
 type LetterGlitchProps = {
   glitchColors?: string[]
@@ -203,10 +204,10 @@ export function LetterGlitch({
   }, [glitchSpeed, smooth])
 
   return (
-    <div className={`relative h-full w-full overflow-hidden bg-black ${className}`}>
-      <canvas ref={canvasRef} className="block h-full w-full" />
-      {outerVignette && <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,rgba(0,0,0,0)_60%,rgba(0,0,0,1)_100%)]" />}
-      {centerVignette && <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle,rgba(0,0,0,0.8)_0%,rgba(0,0,0,0)_60%)]" />}
+    <div className={`letter-glitch ${className}`}>
+      <canvas ref={canvasRef} className="letter-glitch__canvas" />
+      {outerVignette && <div className="letter-glitch__outer-vignette" />}
+      {centerVignette && <div className="letter-glitch__center-vignette" />}
     </div>
   )
 }

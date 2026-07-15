@@ -1,0 +1,7 @@
+.background { pointer-events: none; position: fixed; inset: 0; z-index: 0; overflow: hidden; }
+.background__gradient { position: absolute; inset: 0; background: radial-gradient(circle at 18% 12%, rgba(37,99,235,.2), transparent 28%), radial-gradient(circle at 82% 8%, rgba(14,165,233,.13), transparent 25%), linear-gradient(180deg,#020617 0%,#061527 48%,#020617 100%); }
+.background__grid { position:absolute; inset:0; opacity:.08; background-image:linear-gradient(rgba(148,163,184,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.35) 1px,transparent 1px); background-size:44px 44px; }
+.background__glow { position:absolute; right:-10rem; top:8rem; width:28rem; height:28rem; border-radius:9999px; background:rgba(14,165,233,.1); filter:blur(64px); }
+html[data-theme='light'] .background__gradient { background:radial-gradient(circle at 18% 12%,rgba(14,165,233,.14),transparent 30%),radial-gradient(circle at 82% 8%,rgba(37,99,235,.1),transparent 27%),linear-gradient(180deg,#f8fafc 0%,#eef8ff 48%,#f8fafc 100%); }
+html[data-theme='light'] .background__grid { background-image:linear-gradient(rgba(14,116,144,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(14,116,144,.08) 1px,transparent 1px); opacity:1; }
+html[data-theme='light'] .background__glow { background:rgba(14,165,233,.11); }

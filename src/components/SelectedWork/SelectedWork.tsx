@@ -1,18 +1,19 @@
-import { projects } from '../data/portfolio'
-import { ProjectCard } from './ProjectCard'
-import { SectionHeader } from './SectionHeader'
+import { projects } from '../../data/portfolio'
+import { ProjectCard } from '../ProjectCard/ProjectCard'
+import { SectionHeader } from '../SectionHeader/SectionHeader'
+import './SelectedWork.css'
 
 export function SelectedWork() {
   return (
-    <section id="work" className="px-4 py-24">
-      <div className="mx-auto max-w-7xl">
+    <section id="work" className="selected-work">
+      <div className="selected-work__inner">
         <SectionHeader
           eyebrow="Selected work"
           title="Projects across software, platforms, automation, AI, and infrastructure"
           copy="A selection of projects demonstrating practical software engineering, systems integration, automation, and technical ownership."
         />
 
-        <div className="grid gap-5 lg:grid-cols-2">
+        <div className="selected-work__grid">
           {projects.map((project, index) => (
             <ProjectCard
               key={project.title}
