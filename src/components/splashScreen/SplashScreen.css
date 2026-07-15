@@ -31,7 +31,7 @@
 
 .splash-title {
   padding: 0 20px;
-  font-family: 'Agustina Regular', cursive;
+  font-family: "Agustina Regular", cursive;
   font-weight: bold;
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
@@ -41,7 +41,7 @@
   color: #868e96;
 }
 
-html[data-theme='light'] .splash-container {
+html[data-theme="light"] .splash-container {
   color: #000000;
   background: #ffffff;
 }

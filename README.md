@@ -30,6 +30,7 @@ http://127.0.0.1:5173/Nolan-Young-Portfolio/
 Run the checks used before deployment:
 
 ```bash
+npm run format:check
 npm run lint
 npm run build
 ```
@@ -38,16 +39,16 @@ Use `npm run preview` to serve the production build locally after `npm run build
 
 ## Framework and libraries
 
-| Tool | Purpose |
-| --- | --- |
-| React 19 | Component rendering and state management. |
-| TypeScript | Type-safe application code. |
-| Vite | Local development server and production bundler. |
-| Framer Motion | Entry animations, in-view motion, scroll progress, and splash fade-out. |
-| Lottie React | Displays the JSON animation used by the splash screen. |
-| Lucide React | Accessible SVG icons used throughout the portfolio. |
-| ESLint | Static code-quality checks. |
-| GitHub Actions + GitHub Pages | Continuous build and static-site deployment. |
+| Tool                          | Purpose                                                                 |
+| ----------------------------- | ----------------------------------------------------------------------- |
+| React 19                      | Component rendering and state management.                               |
+| TypeScript                    | Type-safe application code.                                             |
+| Vite                          | Local development server and production bundler.                        |
+| Framer Motion                 | Entry animations, in-view motion, scroll progress, and splash fade-out. |
+| Lottie React                  | Displays the JSON animation used by the splash screen.                  |
+| Lucide React                  | Accessible SVG icons used throughout the portfolio.                     |
+| ESLint                        | Static code-quality checks.                                             |
+| GitHub Actions + GitHub Pages | Continuous build and static-site deployment.                            |
 
 Styling uses ordinary CSS only. Tailwind is not installed or configured. Each styled component owns a `.css` file beside its `.tsx` file, while `src/index.css` contains only global base styles, theme tokens, and reduced-motion behavior.
 
@@ -84,22 +85,22 @@ src/components/ComponentName/
 
 Behavior-only components can omit the CSS file. The existing splash component retains its established lowercase folder name: `src/components/splashScreen/`.
 
-| Component | Responsibility |
-| --- | --- |
-| `AnimatedCounter` | Animates metrics when they enter the viewport and respects reduced-motion preferences. |
-| `Background` | Fixed gradient, grid, and ambient glow behind the page. |
-| `Capabilities` | Capability cards sourced from `portfolio.ts`. |
-| `Contact` | Contact links and résumé call-to-action. |
-| `Experience` | Career timeline and education panel. |
-| `Hero` | Introductory section, profile metrics, calls to action, and glitch panel. |
-| `Impact` | Measured business outcomes and animated metric cards. |
-| `LetterGlitch` | Canvas-based animated character effect used by the hero. |
-| `Navbar` | Desktop/mobile navigation, active-section tracking, and light/dark theme switch. |
-| `Principles` | Engineering-principles grid. |
-| `ScrollProgress` | Framer Motion scroll-position indicator. |
-| `SectionHeader` | Reusable eyebrow, heading, and supporting copy block. |
-| `SelectedWorkV2` | Case-study cards sourced from `portfolio.ts`. |
-| `splashScreen/SplashScreen` | Full-screen Lottie overlay shown for 2000 ms when the app first loads. |
+| Component                   | Responsibility                                                                                                     |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `AnimatedCounter`           | Animates metrics when they enter the viewport and respects reduced-motion preferences.                             |
+| `Background`                | Fixed gradient, grid, and ambient glow behind the page.                                                            |
+| `Capabilities`              | Capability cards sourced from `portfolio.ts`.                                                                      |
+| `Contact`                   | Contact links and résumé call-to-action.                                                                           |
+| `Experience`                | Career timeline and education panel.                                                                               |
+| `Hero`                      | Introductory section, profile metrics, calls to action, and glitch panel.                                          |
+| `Impact`                    | Measured business outcomes and animated metric cards.                                                              |
+| `LetterGlitch`              | Canvas-based animated character effect used by the hero.                                                           |
+| `Navbar`                    | Desktop/mobile navigation, active-section tracking, and light/dark theme switch.                                   |
+| `Principles`                | Engineering-principles grid.                                                                                       |
+| `ScrollProgress`            | Framer Motion scroll-position indicator.                                                                           |
+| `SectionHeader`             | Reusable eyebrow, heading, and supporting copy block.                                                              |
+| `SelectedWorkV2`            | Case-study cards sourced from `portfolio.ts`.                                                                      |
+| `splashScreen/SplashScreen` | Full-screen Lottie overlay shown for 1750 ms when the app first loads, except for users who prefer reduced motion. |
 
 ### Updating content
 
@@ -119,10 +120,10 @@ The résumé is served from `public/Nolan-Young-Resume.pdf`. Access it through `
 2. Import the CSS from the component and use semantic, component-prefixed class names:
 
    ```tsx
-   import './Testimonial.css'
+   import "./Testimonial.css";
 
    export function Testimonial() {
-     return <section className="testimonial">...</section>
+     return <section className="testimonial">...</section>;
    }
    ```
 
@@ -133,7 +134,7 @@ The résumé is served from `public/Nolan-Young-Resume.pdf`. Access it through `
 
 ## Splash screen behavior
 
-`App.tsx` starts with `showSplash` set to `true` and starts a 1750 ms timer after mount. During that interval, only `SplashScreen` is rendered. It uses `useLottie` with `src/assets/lottie/splashAnimation.json`, a stable responsive square animation region capped at 50vh, and the bundled Agustina typeface. When the timer completes, the splash unmounts and the portfolio mounts normally.
+`App.tsx` displays the splash for 1750 ms unless the visitor has enabled reduced motion, in which case it renders the portfolio immediately. During the splash interval, `SplashScreen` is loaded separately from the main application bundle. It uses `useLottie` with `src/assets/lottie/splashAnimation.json`, a stable responsive square animation region capped at 50vh, and the bundled Agustina typeface. When the timer completes, the splash unmounts and the portfolio mounts normally.
 
 ## GitHub Pages workflow
 
@@ -142,9 +143,10 @@ The workflow is `.github/workflows/deploy.yml`. It runs whenever a commit is pus
 1. GitHub checks out the repository.
 2. It installs Node.js 22 and restores the npm cache.
 3. `npm ci` installs exactly the versions pinned in `package-lock.json`.
-4. `npm run build` validates TypeScript and produces `dist/`.
-5. The workflow uploads `dist/` as the GitHub Pages artifact.
-6. The deploy job publishes that artifact to GitHub Pages.
+4. `npm run lint` and `npm run format:check` enforce source-quality checks.
+5. `npm run build` validates TypeScript and produces `dist/`.
+6. The workflow uploads `dist/` as the GitHub Pages artifact.
+7. The deploy job publishes that artifact to GitHub Pages.
 
 The Vite `base` setting is `/Nolan-Young-Portfolio/`. Keep it aligned with the repository name unless the site moves to a custom domain or a different Pages project path.
 
@@ -152,6 +154,7 @@ To publish a change:
 
 ```bash
 git status
+npm run format:check
 npm run lint
 npm run build
 git add .

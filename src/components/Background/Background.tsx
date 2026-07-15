@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import './Background.css'
+import { motion } from "framer-motion";
+import "./Background.css";
 
 export function Background() {
   return (
@@ -9,8 +9,8 @@ export function Background() {
       <motion.div
         className="background__glow"
         animate={{ y: [0, 60, 0], x: [0, -30, 0] }}
-        transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut' }}
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
       />
     </div>
-  )
+  );
 }

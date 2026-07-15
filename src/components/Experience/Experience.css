@@ -1,1 +1,120 @@
-.experience { padding:6rem 1rem; }.experience__inner { max-width:80rem; margin:auto; }.experience__timeline { position:relative; display:grid; gap:1.5rem; }.experience__timeline::before { content:""; position:absolute; top:0; bottom:0; left:1.25rem; width:1px; background:rgba(147,197,253,.18); }.experience__entry { position:relative; display:grid; gap:1rem; }.experience__card { margin-left:3rem; padding:1.5rem; border:1px solid rgba(147,197,253,.14); border-radius:1.5rem; background:var(--surface); backdrop-filter:blur(8px); }.experience__marker { position:absolute; top:1.5rem; left:.5rem; display:grid; place-items:center; width:2rem; height:2rem; border-radius:9999px; color:#fff; background:#3b82f6; }.experience__dates { margin:0; color:var(--accent-strong); font-size:.875rem; font-weight:500; }.experience__title { margin:.5rem 0 0; color:var(--heading); font-size:1.5rem; }.experience__company { margin:.25rem 0 0; color:var(--body-text); }.experience__bullets { display:grid; gap:.5rem; margin:1.25rem 0 0; padding:0; list-style:none; color:var(--body-text); font-size:.875rem; line-height:1.5rem; }.experience__education { margin-top:2.5rem; padding:1.5rem; border:1px solid rgba(103,232,249,.14); border-radius:1.5rem; background:rgba(103,232,249,.08); }.experience__education-inner { display:flex; align-items:flex-start; gap:1rem; }.experience__education-icon { flex-shrink:0; color:var(--accent-strong); }.experience__education-title { margin:0; color:var(--heading); font-size:1.25rem; }.experience__education-date { margin:.25rem 0 0; color:var(--body-text); }.experience__education-copy { margin:.75rem 0 0; color:var(--body-text); font-size:.875rem; line-height:1.5rem; } @media (min-width:768px) { .experience__timeline::before { left:50%; }.experience__entry { grid-template-columns:repeat(2,minmax(0,1fr)); }.experience__entry--right > .experience__card { grid-column:2; }.experience__card { margin-left:0; }.experience__marker { left:50%; transform:translateX(-50%); } }
+.experience {
+  padding: 6rem 1rem;
+}
+.experience__inner {
+  max-width: 80rem;
+  margin: auto;
+}
+.experience__timeline {
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+}
+.experience__timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1.25rem;
+  width: 1px;
+  background: rgba(147, 197, 253, 0.18);
+}
+.experience__entry {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+}
+.experience__card {
+  margin-left: 3rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(147, 197, 253, 0.14);
+  border-radius: 1.5rem;
+  background: var(--surface);
+  backdrop-filter: blur(8px);
+}
+.experience__marker {
+  position: absolute;
+  top: 1.5rem;
+  left: 0.5rem;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  color: #fff;
+  background: #3b82f6;
+}
+.experience__dates {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.experience__title {
+  margin: 0.5rem 0 0;
+  color: var(--heading);
+  font-size: 1.5rem;
+}
+.experience__company {
+  margin: 0.25rem 0 0;
+  color: var(--body-text);
+}
+.experience__bullets {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--body-text);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+.experience__education {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(103, 232, 249, 0.14);
+  border-radius: 1.5rem;
+  background: rgba(103, 232, 249, 0.08);
+}
+.experience__education-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.experience__education-icon {
+  flex-shrink: 0;
+  color: var(--accent-strong);
+}
+.experience__education-title {
+  margin: 0;
+  color: var(--heading);
+  font-size: 1.25rem;
+}
+.experience__education-date {
+  margin: 0.25rem 0 0;
+  color: var(--body-text);
+}
+.experience__education-copy {
+  margin: 0.75rem 0 0;
+  color: var(--body-text);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+@media (min-width: 768px) {
+  .experience__timeline::before {
+    left: 50%;
+  }
+  .experience__entry {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .experience__entry--right > .experience__card {
+    grid-column: 2;
+  }
+  .experience__card {
+    margin-left: 0;
+  }
+  .experience__marker {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

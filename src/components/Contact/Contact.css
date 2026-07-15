@@ -1,1 +1,104 @@
-.contact { padding:6rem 1rem; }.contact__panel { max-width:64rem; margin:auto; padding:2rem; border:1px solid rgba(125,211,252,.16); border-radius:2rem; background:linear-gradient(135deg,rgba(2,6,23,.92),rgba(23,37,84,.42),rgba(2,6,23,.92)); box-shadow:0 0 90px rgba(14,165,233,.12); backdrop-filter:blur(8px); }.contact__eyebrow { margin:0; color:var(--accent); font-size:.875rem; font-weight:600; letter-spacing:.22em; text-transform:uppercase; }.contact__title { margin:1rem 0 0; color:var(--heading); font-size:2.25rem; font-weight:600; letter-spacing:-.025em; }.contact__copy { max-width:48rem; margin:1.5rem 0 0; color:var(--body-text); font-size:1.125rem; line-height:2rem; }.contact__links { display:grid; gap:.75rem; margin-top:2rem; }.contact__link { display:flex; align-items:center; gap:.75rem; padding:1rem; border:1px solid var(--surface-border); border-radius:1rem; color:var(--soft-text); background:var(--subtle-surface); }.contact__link--interactive { transition:border-color 180ms; }.contact__link--interactive:hover { border-color:rgba(125,211,252,.35); }.contact__icon { flex-shrink:0; color:var(--accent); }.contact__resume { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; margin-top:2rem; padding:.75rem 1.5rem; border-radius:9999px; color:#0f172a; background:#7dd3fc; font-weight:600; transition:background-color 180ms; }.contact__resume:hover { background:#bae6fd; } html[data-theme='light'] .contact__panel { border-color:rgba(14,116,144,.22); background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(239,246,255,.95),rgba(236,254,255,.92)); box-shadow:0 24px 70px rgba(14,116,144,.12); } @media (min-width:640px) { .contact__links { grid-template-columns:repeat(2,minmax(0,1fr)); } } @media (min-width:768px) { .contact__panel { padding:3rem; }.contact__title { font-size:3.75rem; } }
+.contact {
+  padding: 6rem 1rem;
+}
+.contact__panel {
+  max-width: 64rem;
+  margin: auto;
+  padding: 2rem;
+  border: 1px solid rgba(125, 211, 252, 0.16);
+  border-radius: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(2, 6, 23, 0.92),
+    rgba(23, 37, 84, 0.42),
+    rgba(2, 6, 23, 0.92)
+  );
+  box-shadow: 0 0 90px rgba(14, 165, 233, 0.12);
+  backdrop-filter: blur(8px);
+}
+.contact__eyebrow {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.contact__title {
+  margin: 1rem 0 0;
+  color: var(--heading);
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+.contact__copy {
+  max-width: 48rem;
+  margin: 1.5rem 0 0;
+  color: var(--body-text);
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+.contact__links {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+.contact__link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--surface-border);
+  border-radius: 1rem;
+  color: var(--soft-text);
+  background: var(--subtle-surface);
+}
+.contact__link--interactive {
+  transition: border-color 180ms;
+}
+.contact__link--interactive:hover {
+  border-color: rgba(125, 211, 252, 0.35);
+}
+.contact__icon {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+.contact__resume {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  color: #0f172a;
+  background: #7dd3fc;
+  font-weight: 600;
+  transition: background-color 180ms;
+}
+.contact__resume:hover {
+  background: #bae6fd;
+}
+html[data-theme="light"] .contact__panel {
+  border-color: rgba(14, 116, 144, 0.22);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(239, 246, 255, 0.95),
+    rgba(236, 254, 255, 0.92)
+  );
+  box-shadow: 0 24px 70px rgba(14, 116, 144, 0.12);
+}
+@media (min-width: 640px) {
+  .contact__links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 768px) {
+  .contact__panel {
+    padding: 3rem;
+  }
+  .contact__title {
+    font-size: 3.75rem;
+  }
+}

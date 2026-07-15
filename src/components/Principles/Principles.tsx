@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion'
-import { Check } from 'lucide-react'
-import { principles } from '../../data/portfolio'
-import { SectionHeader } from '../SectionHeader/SectionHeader'
-import './Principles.css'
+import { motion } from "framer-motion";
+import { Check } from "lucide-react";
+import { principles } from "../../data/portfolio";
+import { SectionHeader } from "../SectionHeader/SectionHeader";
+import "./Principles.css";
 
 export function Principles() {
   return (
@@ -32,5 +32,5 @@ export function Principles() {
         </div>
       </div>
     </section>
-  )
+  );
 }

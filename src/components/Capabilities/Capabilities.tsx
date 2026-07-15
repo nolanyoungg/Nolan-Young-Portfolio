@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion'
-import { Code2 } from 'lucide-react'
-import { capabilities } from '../../data/portfolio'
-import { SectionHeader } from '../SectionHeader/SectionHeader'
-import './Capabilities.css'
+import { motion } from "framer-motion";
+import { Code2 } from "lucide-react";
+import { capabilities } from "../../data/portfolio";
+import { SectionHeader } from "../SectionHeader/SectionHeader";
+import "./Capabilities.css";
 
 export function Capabilities() {
   return (
@@ -20,7 +20,7 @@ export function Capabilities() {
               className="capabilities__card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-80px' }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{ delay: index * 0.035 }}
             >
               <Code2 className="capabilities__icon" size={24} />
@@ -38,5 +38,5 @@ export function Capabilities() {
         </div>
       </div>
     </section>
-  )
+  );
 }

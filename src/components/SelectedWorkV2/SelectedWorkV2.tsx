@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion'
-import { CheckCircle2 } from 'lucide-react'
-import { caseStudies } from '../../data/portfolio'
-import { SectionHeader } from '../SectionHeader/SectionHeader'
-import './SelectedWorkV2.css'
+import { motion } from "framer-motion";
+import { CheckCircle2 } from "lucide-react";
+import { caseStudies } from "../../data/portfolio";
+import { SectionHeader } from "../SectionHeader/SectionHeader";
+import "./SelectedWorkV2.css";
 
 export function SelectedWorkV2() {
   return (
@@ -20,7 +20,7 @@ export function SelectedWorkV2() {
               className="selected-work-v2__card"
               initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-70px' }}
+              viewport={{ once: true, margin: "-70px" }}
               transition={{ delay: index * 0.04 }}
             >
               <div>
@@ -28,7 +28,9 @@ export function SelectedWorkV2() {
                 <h3 className="selected-work-v2__title">{study.title}</h3>
                 <div className="selected-work-v2__problem">
                   <p className="selected-work-v2__problem-label">Problem</p>
-                  <p className="selected-work-v2__problem-copy">{study.problem}</p>
+                  <p className="selected-work-v2__problem-copy">
+                    {study.problem}
+                  </p>
                 </div>
               </div>
               <div>
@@ -36,7 +38,10 @@ export function SelectedWorkV2() {
                 <ul className="selected-work-v2__proof">
                   {study.proof.map((item) => (
                     <li key={item} className="selected-work-v2__proof-item">
-                      <CheckCircle2 className="selected-work-v2__check" size={17} />
+                      <CheckCircle2
+                        className="selected-work-v2__check"
+                        size={17}
+                      />
                       {item}
                     </li>
                   ))}
@@ -54,5 +59,5 @@ export function SelectedWorkV2() {
         </div>
       </div>
     </section>
-  )
+  );
 }
