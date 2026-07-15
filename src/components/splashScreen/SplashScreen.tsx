@@ -1,9 +1,15 @@
 import './SplashScreen.css'
 import { motion } from 'framer-motion'
-import Lottie from 'lottie-react'
+import { useLottie } from 'lottie-react'
 import animationData from '../../assets/lottie/splashAnimation.json'
 
 export default function SplashScreen() {
+  const { View } = useLottie({
+    animationData,
+    loop: true,
+    autoplay: true,
+  })
+
   return (
     <motion.div
       className="splash-container"
@@ -12,11 +18,7 @@ export default function SplashScreen() {
       transition={{ duration: 0.25, ease: 'easeOut' }}
     >
       <div className="splash-animation-container">
-        <Lottie
-          animationData={animationData}
-          loop
-          autoplay
-        />
+        {View}
       </div>
 
       <div className="splash-title-container">
