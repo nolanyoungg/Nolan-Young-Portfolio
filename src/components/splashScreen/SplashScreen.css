@@ -5,7 +5,7 @@
   justify-content: center;
   min-height: 100vh;
   color: #ffffff;
-  background: #171c28;
+  background: #020617;
 }
 
 .splash-animation-container {
@@ -30,7 +30,7 @@
 
 .splash-title {
   padding: 0 20px;
-  font-family: Arial, Helvetica, sans-serif, cursive;
+  font-family: 'Agustina Regular', cursive;
   font-weight: bold;
   font-variant-ligatures: no-common-ligatures;
   -webkit-font-variant-ligatures: no-common-ligatures;
