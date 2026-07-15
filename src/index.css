@@ -3,7 +3,9 @@
   font-style: normal;
   font-weight: normal;
   src: url('./assets/fonts/Agustina.woff') format('woff');
-  font-display: swap;
+  /* Never briefly render the splash title in a fallback font. The font is
+     preloaded in index.html, so this normally resolves before the first paint. */
+  font-display: block;
 }
 
 :root {
