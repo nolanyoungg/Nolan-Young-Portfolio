@@ -133,7 +133,7 @@ The résumé is served from `public/Nolan-Young-Resume.pdf`. Access it through `
 
 ## Splash screen behavior
 
-`App.tsx` starts with `showSplash` set to `true`, starts a 2000 ms timer after mount, and mounts `SplashScreen` as a fixed overlay above the page. `SplashScreen` uses `useLottie` with `src/assets/lottie/splashAnimation.json`; it fades out through Framer Motion after the timer completes. The rest of the portfolio renders behind it, so removing the splash never changes layout or scroll position.
+`App.tsx` starts with `showSplash` set to `true` and starts a 2000 ms timer after mount. During that interval, only `SplashScreen` is rendered. It uses `useLottie` with `src/assets/lottie/splashAnimation.json`, a 50vh animation region, and the bundled Agustina typeface. When the timer completes, the splash unmounts and the portfolio mounts normally.
 
 ## GitHub Pages workflow
 

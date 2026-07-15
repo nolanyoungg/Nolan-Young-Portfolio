@@ -1,4 +1,4 @@
-import { AnimatePresence, MotionConfig } from 'framer-motion'
+import { MotionConfig } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { Background } from './components/Background/Background'
 import { Capabilities } from './components/Capabilities/Capabilities'
@@ -22,7 +22,9 @@ function App() {
   }, [])
 
   return (
-    <>
+    showSplash ? (
+      <SplashScreen />
+    ) : (
       <MotionConfig reducedMotion="user">
         <ScrollProgress />
         <Background />
@@ -38,9 +40,7 @@ function App() {
           <Contact />
         </main>
       </MotionConfig>
-
-      <AnimatePresence>{showSplash && <SplashScreen />}</AnimatePresence>
-    </>
+    )
   )
 }
 
