@@ -49,7 +49,7 @@ export function Hero() {
               >
                 Explore capabilities
               </a>
-              {/* Place Nolan's resume PDF in public/resume.pdf before deployment. */}
+              {/* The resume PDF is served from public/Nolan-Young-Resume.pdf. */}
               <a
                 className="hero__button hero__button--resume"
                 href={resumeHref}
