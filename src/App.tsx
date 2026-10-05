@@ -8,6 +8,7 @@ import { Hero } from "./components/Hero/Hero";
 import { Impact } from "./components/Impact/Impact";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Principles } from "./components/Principles/Principles";
+import { Projects } from "./components/Projects/Projects";
 import { ScrollProgress } from "./components/ScrollProgress/ScrollProgress";
 
 import { SelectedWorkV2 } from "./components/SelectedWorkV2/SelectedWorkV2";
@@ -42,6 +43,7 @@ function App() {
           <main className="app-main">
             <Hero />
             <Impact />
+            <Projects />
             <SelectedWorkV2 />
             <Capabilities />
             <Experience />
